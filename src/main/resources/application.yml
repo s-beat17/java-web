@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/webapp_db
+    username: webapp_user
+    password: test
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  security:
+    user:
+      name: user
+      password: pass
+      roles: ADMIN
+server:
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore/my_store.p12
+    key-store-password: password
+  port: 8443
